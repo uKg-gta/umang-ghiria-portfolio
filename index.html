@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0d12">
+<title>Umang Ghiria — Student · Aspiring Writer · Independent Thinker</title>
+<meta name="description" content="Umang Ghiria — exploring economics, politics, philosophy, and society through critical thinking, research, and writing.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap');
+:root{--bg:#0b0d12;--panel:#12151d;--panel2:#171b25;--text:#f2f0ec;--muted:#a4a6b1;--line:#292d38;--accent:#c7b8f5;--accent2:#e7dffb;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(11,13,18,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:600;font-size:1.15rem;letter-spacing:-.08em}.logo span{color:var(--accent)}.links{display:flex;gap:30px;align-items:center;font-size:.86rem;color:#c6c7ce}.links a{transition:color .2s}.links a:hover{color:var(--accent)}.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 11px}
+.hero{min-height:690px;display:flex;align-items:center;padding:110px 0 100px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:550px;height:550px;border-radius:50%;right:-160px;top:50px;background:radial-gradient(circle,rgba(157,130,226,.12),transparent 68%);pointer-events:none}.eyebrow{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:500}.hero h1{font-size:clamp(3.5rem,9vw,7.5rem);line-height:.98;letter-spacing:-.085em;margin:28px 0 24px;max-width:900px;font-weight:500}.hero h1 em{font-family:Georgia,serif;font-weight:400;color:var(--accent);letter-spacing:-.07em}.hero p{font-size:1.12rem;color:#b7b8c1;max-width:600px;margin:0 0 34px}.actions{display:flex;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:12px;padding:13px 19px;border-radius:9px;font-size:.9rem;font-weight:500;border:1px solid var(--line);transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--accent);color:#171321;border-color:var(--accent)}.primary:hover{background:var(--accent2)}.secondary{color:var(--text);background:rgba(255,255,255,.02)}.scroll-note{position:absolute;bottom:35px;left:0;color:#747783;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+.focus-strip{padding:52px 0 70px;border-top:1px solid rgba(255,255,255,.06)}.focus-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.focus-note{font-size:.78rem;color:#747783;letter-spacing:.04em}.focus-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.focus-grid article{padding:20px 18px 21px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(255,255,255,.018);min-height:150px}.focus-grid article>span{color:var(--accent);font-size:.65rem;letter-spacing:.12em;font-weight:500}.focus-grid h3{font-size:1.05rem;letter-spacing:-.035em;margin:17px 0 7px}.focus-grid p{margin:0;color:var(--muted);font-size:.78rem;line-height:1.55}
+
+section{padding:105px 0;border-top:1px solid rgba(255,255,255,.06)}.section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:42px}.kicker{color:var(--accent);font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;font-weight:500}.section-head h2{font-size:clamp(2.2rem,5vw,4rem);line-height:1.05;letter-spacing:-.07em;margin:12px 0 0}.section-head p{max-width:380px;color:var(--muted);margin:0;font-size:.94rem}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px}.lead{font-size:1.55rem;line-height:1.5;letter-spacing:-.035em;color:#e7e5e1;margin:0}.about-copy{color:var(--muted);margin-top:22px}.facts{border-top:1px solid var(--line)}.fact{padding:19px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px}.fact span:first-child{color:#858894;font-size:.83rem}.fact span:last-child{text-align:right;font-size:.9rem}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card{background:linear-gradient(145deg,var(--panel),#10131a);border:1px solid var(--line);border-radius:15px;padding:27px;min-height:215px;display:flex;flex-direction:column;transition:border-color .25s,transform .25s}.card:hover{border-color:#645b7d;transform:translateY(-4px)}.card-top{display:flex;justify-content:space-between;color:var(--accent);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}.card h3{font-size:1.45rem;letter-spacing:-.04em;margin:30px 0 8px}.card p{color:var(--muted);font-size:.91rem;margin:0}.card .note{margin-top:auto;padding-top:24px;color:#777b87;font-size:.75rem}.essay-details{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}.essay-details summary{cursor:pointer;color:var(--accent);font-size:.86rem;font-weight:500;list-style:none}.essay-details summary::-webkit-details-marker{display:none}.essay-details summary:after{content:'＋';float:right}.essay-details[open] summary:after{content:'−'}.essay-content{color:#c6c7ce;font-size:.92rem;line-height:1.85;padding-top:20px}.essay-content h4{color:var(--text);font-size:1rem;margin:24px 0 8px}.essay-content p{color:#c6c7ce;font-size:.92rem;margin:0 0 15px}.essay-content blockquote{border-left:2px solid var(--accent);padding-left:16px;color:#e4dff0;margin:22px 0;font-family:Georgia,serif}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}.chip{border:1px solid #343846;border-radius:999px;padding:9px 15px;color:#d1ced9;background:#141720;font-size:.85rem}.disclaimer{color:#858894;font-size:.82rem;margin-top:20px}
+.timeline{border-left:1px solid #3b354b;margin-left:9px;padding-left:30px}.timeline-item{position:relative;padding:0 0 32px}.timeline-item:before{content:"";position:absolute;left:-36px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px #1a1724}.timeline-item h3{margin:0;font-size:1.1rem}.timeline-item p{color:var(--muted);margin:5px 0 0;font-size:.9rem}.year{color:var(--accent);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+.reading{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.reading article{padding:24px;border:1px solid var(--line);border-radius:12px;background:#10131a}.reading h3{font-family:Georgia,serif;font-weight:400;font-size:1.35rem;margin:0 0 9px}.reading p{color:var(--muted);font-size:.86rem;margin:0}
+.contact-box{background:linear-gradient(135deg,#1b1925,#12151d 65%);border:1px solid #373044;border-radius:18px;padding:clamp(28px,6vw,65px);display:flex;justify-content:space-between;align-items:center;gap:30px}.contact-box h2{font-size:clamp(2.2rem,5vw,4rem);line-height:1.05;letter-spacing:-.07em;margin:10px 0 15px}.contact-box p{color:var(--muted);max-width:500px;margin:0}.email{white-space:nowrap;color:var(--accent);border-bottom:1px solid #7d6caa;padding-bottom:5px}
+footer{padding:30px 0;color:#777b87;font-size:.78rem}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px}.contact-links{display:flex;align-items:center;justify-content:flex-end;gap:16px;flex-wrap:wrap}.contact-links a{color:#b8bcc6;text-decoration:none}.contact-links a:hover{color:var(--accent)}.contact-links .email-btn{color:var(--text)}
+.reveal{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+@media(min-width:721px) and (max-width:1100px){.wrap{width:min(100% - 48px,var(--max))}.links{gap:20px}.hero{min-height:650px;padding:90px 0 95px}.hero h1{font-size:clamp(3.6rem,8vw,6rem);line-height:1.01;letter-spacing:-.065em;max-width:820px}.hero h1 em{letter-spacing:-.055em}.hero p{max-width:560px}.focus-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.reveal{opacity:1!important;transform:none!important}.wrap{width:min(100% - 34px,var(--max))}.nav{height:68px}.menu{display:block}.links{display:none;position:absolute;top:68px;left:0;right:0;padding:20px 24px 25px;background:#10131a;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:18px}.links.open{display:flex}.hero{min-height:620px;padding:90px 0}.hero h1{font-size:clamp(3.4rem,16vw,6rem)}.hero p{font-size:1rem}.section-head{display:block}.section-head p{margin-top:18px}.about-grid{grid-template-columns:1fr;gap:35px}.cards{grid-template-columns:1fr}.reading{grid-template-columns:1fr}.contact-box{display:block}.contact-links{justify-content:flex-start;margin-top:28px}.email{white-space:normal}.foot{flex-direction:column}.focus-strip{padding:38px 0 55px}.focus-head{display:block}.focus-note{display:block;margin-top:8px}.focus-grid{grid-template-columns:1fr 1fr;gap:10px}.focus-grid article{min-height:0;padding:17px 15px}.focus-grid h3{margin-top:13px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+
+.read-essay-btn{margin-top:24px;display:inline-flex;align-items:center;gap:12px;justify-content:space-between;max-width:100%;background:transparent;border:1px solid #4b435e;border-radius:9px;padding:12px 15px;color:var(--accent);font-weight:500;cursor:pointer;text-align:left;transition:background .2s,border-color .2s}.read-essay-btn:hover{background:#201c2b;border-color:var(--accent)}
+.essay-modal{position:fixed;inset:0;z-index:2000;display:none}.essay-modal.open{display:block}.essay-modal-backdrop{position:absolute;inset:0;background:rgba(3,4,8,.82);backdrop-filter:blur(8px)}
+.essay-reader{position:absolute;inset:24px max(20px,calc((100vw - 900px)/2));background:#10131b;border:1px solid #34303f;border-radius:16px;overflow-y:auto;box-shadow:0 25px 100px rgba(0,0,0,.55);overscroll-behavior:contain}
+.reader-topbar{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 22px;background:rgba(16,19,27,.94);backdrop-filter:blur(14px);border-bottom:1px solid #292d38}.reader-label{font-size:.68rem;letter-spacing:.13em;color:#a99acb;font-weight:500}.reader-close{width:38px;height:38px;flex:0 0 38px;border:1px solid #44404f;border-radius:50%;background:#1b1d27;color:#f2f0ec;font-size:1.6rem;line-height:1;cursor:pointer}.reader-close:hover{background:#302a3d}
+.reader-inner{width:min(100%,700px);margin:0 auto;padding:clamp(28px,6vw,72px) clamp(22px,6vw,48px) 70px}.reader-kicker{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:500}.reader-inner h2{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.12;letter-spacing:-.06em;margin:18px 0 18px;color:#f3f0eb}.reader-deck{font-size:1.08rem;line-height:1.7;color:#aeb0bb;margin:0}.reader-rule{height:1px;background:linear-gradient(90deg,#8877b5,transparent);margin:32px 0}
+.reader-inner .essay-content{padding:0;color:#d0ced6;font-family:Newsreader,Georgia,serif;font-size:1.12rem;line-height:1.95}.reader-inner .essay-content p{font-family:inherit;font-size:inherit;line-height:inherit;color:#d0ced6;margin:0 0 1.45em}.reader-inner .essay-content h4{font-family:Inter,system-ui,sans-serif;font-size:1.08rem;letter-spacing:-.02em;color:#f0edf5;margin:2.2em 0 .8em}.reader-inner .essay-content blockquote{font-family:Georgia,serif;font-size:1.12rem;color:#e2d9f4;margin:2em 0;padding:5px 0 5px 20px;border-left:2px solid var(--accent)}.reader-endnote{margin-top:42px;padding-top:18px;border-top:1px solid #292d38;color:#858894;font-size:.78rem;letter-spacing:.04em}
+body.essay-open{overflow:hidden}
+@media(max-width:720px){.essay-reader{inset:8px;border-radius:12px}.reader-topbar{padding:12px 15px}.reader-label{font-size:.58rem;letter-spacing:.08em}.reader-inner{padding:34px 22px 48px}.reader-inner .essay-content{font-size:1.04rem;line-height:1.85}.reader-inner h2{font-size:2.25rem}}
+\n
+.writing-library-preview{border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,#12151d,#171522);padding:clamp(28px,5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:35px}
+.library-mini-label{display:block;color:var(--accent);font-size:.68rem;letter-spacing:.16em;font-weight:500}.library-preview-copy h3{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.06em;margin:12px 0 8px}.library-preview-copy p{color:var(--muted);max-width:570px;margin:0}
+.library-open-btn{flex:0 0 auto;border:1px solid #5a506d;background:#c7b8f5;color:#171321;border-radius:9px;padding:14px 18px;font:inherit;font-size:.88rem;font-weight:500;cursor:pointer;white-space:nowrap}.library-open-btn:hover{background:#e7dffb}
+.library-modal,.category-modal{position:fixed;inset:0;z-index:1100;display:none}.library-modal.open,.category-modal.open{display:block}.library-backdrop,.category-backdrop{position:absolute;inset:0;background:rgba(3,4,8,.88);backdrop-filter:blur(8px)}
+.library-page,.category-page{position:absolute;inset:16px max(12px,calc((100vw - 1040px)/2));overflow-y:auto;overscroll-behavior:contain;background:#10131b;border:1px solid #34303f;border-radius:16px;box-shadow:0 25px 100px rgba(0,0,0,.55)}
+.library-topbar,.category-topbar{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:14px 22px;background:rgba(16,19,27,.96);backdrop-filter:blur(14px);border-bottom:1px solid #292d38}.library-topbar div{display:flex;align-items:center;gap:16px}.library-topbar strong{font-size:.75rem;letter-spacing:.12em}
+.library-close{width:38px;height:38px;flex:0 0 38px;border:1px solid #44404f;border-radius:50%;background:#1b1d27;color:#f2f0ec;font-size:1.6rem;line-height:1;cursor:pointer}.library-close:hover{background:#302a3d}
+.library-inner,.category-inner{width:min(100%,940px);margin:0 auto;padding:28px clamp(22px,5vw,52px) 70px}.library-back,.category-back{background:none;border:0;color:#9b9eaa;padding:0 0 34px;cursor:pointer;font:inherit;font-size:.82rem}.library-back:hover,.category-back:hover{color:var(--accent)}
+.library-inner h2,.category-inner h2{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.02;letter-spacing:-.075em;margin:14px 0}.library-intro{font-size:1.02rem;color:var(--muted);max-width:650px;margin:0}.library-rule{height:1px;background:linear-gradient(90deg,#8877b5,transparent);margin:34px 0}
+.category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.category-card{min-height:225px;text-align:left;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#12151d,#10131a);padding:25px;color:var(--text);cursor:pointer;transition:transform .2s,border-color .2s,background .2s;display:flex;flex-direction:column}.category-card:hover{transform:translateY(-4px);border-color:#635979;background:#171a23}.category-card span{color:var(--accent);font-size:.7rem;letter-spacing:.12em;font-weight:500}.category-card h3{font-size:1.55rem;letter-spacing:-.045em;margin:26px 0 7px}.category-card p{color:var(--muted);font-size:.88rem;margin:0;max-width:390px}.category-card b{margin-top:auto;padding-top:24px;color:var(--accent);font-size:.78rem}
+.category-essays{display:grid;gap:14px}.essay-list-card{border:1px solid var(--line);border-radius:13px;background:#12151d;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:25px}.essay-list-card h3{margin:0 0 7px;font-size:1.25rem;letter-spacing:-.035em}.essay-list-card p{margin:0;color:var(--muted);font-size:.86rem}.essay-list-card button{flex:0 0 auto;border:1px solid #4b435e;background:transparent;border-radius:9px;color:var(--accent);padding:11px 14px;font:inherit;font-size:.8rem;font-weight:500;cursor:pointer}.empty-category{border:1px dashed #373b48;border-radius:13px;padding:30px;color:#858894;text-align:center}
+body.library-open,body.category-open{overflow:hidden}
+@media(max-width:720px){.writing-library-preview{display:block}.library-open-btn{margin-top:25px;width:100%}.library-page,.category-page{inset:6px;border-radius:12px}.library-topbar,.category-topbar{padding:12px 15px}.library-inner,.category-inner{padding:25px 20px 48px}.category-grid{grid-template-columns:1fr}.category-card{min-height:190px}.essay-list-card{display:block}.essay-list-card button{margin-top:18px;width:100%}}
+
+
+/* === AUTHORITATIVE TYPOGRAPHY & SPACING RULES === */
+:root{--bg:#0b0d12;--text:#ECEAE4;--muted:#B8BCC6}
+html,body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;letter-spacing:0;line-height:1.6}body{font-weight:400}
+h1,h2,h3,h4,h5,h6,.hero h1,.section-head h2,.contact-box h2,.card h3,.focus-grid h3,.category-card h3,.essay-list-card h3,.library-inner h2,.category-inner h2,.reader-inner h2,.reading h3,.library-preview-copy h3{font-family:Newsreader,Georgia,serif;font-weight:600;letter-spacing:-0.015em;word-spacing:0.05em;line-height:1.15}
+p,.about-copy,.lead,.fact,.timeline-item p,.focus-grid p,.card p,.section-head p,.contact-box p,.reading p,.library-intro,.essay-list-card p,.category-card p,.library-preview-copy p,.reader-deck,.essay-content p,.essay-content,.reader-endnote{font-family:Inter,system-ui,sans-serif;letter-spacing:0;font-weight:400;line-height:1.6}
+.links,.btn,.menu,.logo,.library-open-btn,.library-back,.category-back,.read-essay-btn,.reader-close,.library-close,.kicker,.eyebrow,.reader-label,.reader-kicker,.library-mini-label,.card-top,.category-card span,.category-card b,.year,.focus-grid article>span,.email,.chip,.disclaimer,.foot,.library-topbar strong{font-family:Inter,system-ui,sans-serif;letter-spacing:0;font-weight:500}
+.eyebrow,.kicker,.reader-label,.reader-kicker,.library-mini-label,.year,.focus-grid article>span,.card-top,.category-card span{font-size:12px;letter-spacing:0.14em;font-weight:500;text-transform:uppercase;line-height:1.15}
+.hero h1{font-size:clamp(2.5rem,7vw,5rem);line-height:1.15;letter-spacing:-0.015em;word-spacing:0.05em;font-weight:600}.section-head h2,.contact-box h2{font-size:clamp(2rem,5vw,3.25rem);line-height:1.15;letter-spacing:-0.015em;word-spacing:0.05em;font-weight:600}.card h3,.focus-grid h3,.category-card h3{font-size:1.5rem;line-height:1.15;letter-spacing:-0.015em;word-spacing:0.05em;font-weight:600}
+body,p,.card p,.focus-grid p,.section-head p,.about-copy,.contact-box p,.reading p,.library-intro,.essay-list-card p,.category-card p,.library-preview-copy p{font-size:1rem;line-height:1.6}
+.reader-inner .essay-content,.reader-inner .essay-content p,.reader-inner .essay-content blockquote{font-family:Newsreader,Georgia,serif;font-size:1.125rem;line-height:1.7;font-weight:400;letter-spacing:0}.reader-inner .essay-content{max-width:65ch;margin-left:auto;margin-right:auto}.reader-inner .essay-content h4{font-family:Newsreader,Georgia,serif;font-size:1.5rem;line-height:1.15;font-weight:600;letter-spacing:-0.015em;word-spacing:0.05em}.reading h3{font-size:1.5rem;font-weight:600}.reader-inner h2,.library-inner h2,.category-inner h2{font-size:clamp(2rem,5vw,3.25rem);line-height:1.15;letter-spacing:-0.015em;word-spacing:0.05em;font-weight:600}
+.btn,.menu,.library-open-btn,.library-back,.category-back,.read-essay-btn,.reader-close,.library-close,.category-card,.essay-list-card button{min-height:44px}
+.hero{padding:112px 0 96px}.eyebrow{margin-bottom:16px}.personal-intro{font-family:Newsreader,Georgia,serif;font-size:clamp(1.5rem,3vw,2.15rem);line-height:1.15;font-weight:600;font-style:italic;letter-spacing:-0.015em;word-spacing:0.05em;color:var(--accent);margin-bottom:16px}.hero h1{margin:0 0 20px}.hero p{margin:0 0 40px;color:var(--muted);font-size:1rem;line-height:1.6}.actions{gap:16px}section{padding:112px 0}.section-head{margin-bottom:40px}.section-head h2{margin:16px 0 0}.section-head p{margin:0}.focus-strip{padding:96px 0 112px}.focus-head{margin-bottom:40px}.focus-grid{gap:24px}.focus-grid article{padding:32px;min-height:0}.focus-grid h3{margin:16px 0 8px}.about-grid{gap:64px}.lead{font-size:1.5rem;line-height:1.6}.about-copy{margin-top:24px}.cards{gap:24px}.card{padding:32px}.card h3{margin:32px 0 8px}.card .note{padding-top:24px}.skills{gap:16px;margin-top:16px}.timeline{padding-left:32px}.timeline-item{padding-bottom:32px}.reading{gap:24px}.reading article{padding:32px}.contact-box{padding:64px;gap:32px}.contact-box h2{margin:16px 0 20px}footer{padding:32px 0}
+.reader-topbar,.library-topbar,.category-topbar{padding:16px 24px}.reader-inner{padding:64px 32px 64px;width:min(100%,65ch)}.reader-inner h2{margin:16px 0 20px}.reader-rule,.library-rule{margin:40px 0}.reader-deck{margin:0 0 40px}.reader-inner .essay-content p{margin:0 0 24px}.reader-inner .essay-content h4{margin:40px 0 16px}.reader-endnote{margin-top:40px;padding-top:16px}.library-inner,.category-inner{padding:32px 32px 64px}.library-back,.category-back{padding:0 0 32px}.library-inner h2,.category-inner h2{margin:16px 0 20px}.category-grid{gap:24px}.category-card{padding:32px}.category-card h3{margin:24px 0 8px}.category-card b{padding-top:24px}.category-essays{gap:24px}.essay-list-card{padding:32px;gap:24px}
+@media(min-width:721px) and (max-width:1100px){.hero{padding:96px 0 96px}.hero h1{font-size:clamp(2.5rem,7vw,5rem);letter-spacing:-0.015em}}
+@media(max-width:720px){.section-head p{margin-top:20px}.hero{padding:40px 0 64px;align-items:flex-start}section{padding:64px 0}.focus-strip{padding:64px 0}.focus-head{margin-bottom:40px}.focus-grid{gap:24px}.focus-grid article{padding:24px}.about-grid{gap:32px}.cards,.category-grid{gap:24px}.card,.category-card,.essay-list-card,.reading article{padding:24px}.contact-box{padding:32px}.reader-inner{padding:48px 24px 48px}.library-inner,.category-inner{padding:24px 24px 64px}}
+@media(max-width:639px){.cards,.reading,.category-grid,.focus-grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="logo" href="#home" aria-label="Umang Ghiria home">UG<span>.</span></a><button class="menu" id="menu" aria-expanded="false" aria-label="Toggle navigation">☰</button><nav class="links" id="links"><a href="#about">About</a><a href="#writing" id="writing-nav">Writing</a><a href="#research">Research</a><a href="#journey">Journey</a><a href="#reading">Reading</a><a href="#contact">Contact</a></nav></div></header>
+<main>
+<div class="wrap hero" id="home"><div class="reveal"><div class="personal-intro">Hi, I'm Umang.</div><h1>Curiosity is<br>where <em>everything</em><br>begins.</h1><p>Exploring economics, politics, philosophy, and society through critical thinking, research, and writing.</p><div class="actions"><a class="btn primary" href="#writing">Explore my work <span>↗</span></a><a class="btn secondary" href="#about">A little about me <span>↓</span></a></div></div><div class="scroll-note">Scroll to explore&nbsp; ↓</div></div>
+
+<section class="focus-strip" aria-label="Current focus"><div class="wrap"><div class="focus-head"><span class="kicker">Currently exploring</span><span class="focus-note">Questions I keep returning to</span></div><div class="focus-grid"><article><span>01</span><h3>Economics</h3><p>Development, inequality, institutions, and how economies shape everyday life.</p></article><article><span>02</span><h3>Political thought</h3><p>Power, governance, ideas, and the forces behind political change.</p></article><article><span>03</span><h3>Philosophy</h3><p>Meaning, knowledge, ethics, and the questions beneath ordinary assumptions.</p></article><article><span>04</span><h3>Writing</h3><p>Turning questions into essays, reflections, and arguments worth revisiting.</p></article></div></div></section>
+
+<section id="about"><div class="wrap reveal"><div class="section-head"><div><div class="kicker">01 / About me</div><h2>A mind in<br>the making.</h2></div><p>A personal space for ideas, learning, and the ongoing process of understanding the world.</p></div><div class="about-grid"><div><p class="lead">An undergraduate student exploring economics, politics, philosophy, and society through critical thinking, research, and writing.</p><p class="about-copy">This website is a growing record of my academic journey, questions, and work. It is intended to evolve alongside what I learn and the perspectives I develop.</p></div><div class="facts"><div class="fact"><span>Name</span><span>Umang Ghiria</span></div><div class="fact"><span>University</span><span>Delhi University</span></div><div class="fact"><span>Degree</span><span>B.A. Programme (Economics)</span></div><div class="fact"><span>Interests</span><span>Economics · Politics · Philosophy</span></div></div></div></div></section>
+<section id="writing"><div class="wrap reveal">
+<div class="section-head"><div><div class="kicker">02 / Writing & essays</div><h2>Ideas, in words.</h2></div>
+<p>Essays, reflections, and questions organised into a growing library of ideas.</p></div>
+<div class="writing-library-preview">
+<div class="library-preview-copy"><span class="library-mini-label">THE QUITE THINKER · LIBRARY</span><h3>A collection of thoughts.</h3><p>Explore my writing by subject. Choose a category to discover the pieces inside.</p></div>
+<button class="library-open-btn" type="button" id="open-library">Open writing library <span>↗</span></button>
+</div></div></section>
+<section id="research"><div class="wrap reveal"><div class="section-head"><div><div class="kicker">03 / Research & projects</div><h2>Learning by doing.</h2></div><p>A place for independent projects, research, and analytical work as they take shape.</p></div><div class="cards"><article class="card"><div class="card-top"><span>Research</span><span>01</span></div><h3>Independent research</h3><p>Explorations in economics, public policy, and related fields, developed through reading and analysis.</p><div class="note">Projects to be added</div></article><article class="card"><div class="card-top"><span>Projects</span><span>02</span></div><h3>Analytical work</h3><p>A collection of practical work and projects that reflect curiosity, experimentation, and continued learning.</p><div class="note">Projects to be added</div></article></div></div></section>
+<section id="skills"><div class="wrap reveal"><div class="section-head"><div><div class="kicker">04 / Skills & tools</div><h2>Building capability.</h2></div><p>A living section that can grow as I gain experience and complete meaningful work.</p></div><div class="skills"><span class="chip">Critical thinking</span><span class="chip">Research</span><span class="chip">Writing</span><span class="chip">Economics</span><span class="chip">Political analysis</span></div><p class="disclaimer">Skills and tools will be expanded as specific experience and projects are added.</p></div></section>
+<section id="journey"><div class="wrap reveal"><div class="section-head"><div><div class="kicker">05 / Academic journey</div><h2>Still becoming.</h2></div><p>Education is not a finished destination, but a process of asking better questions.</p></div><div class="timeline"><div class="timeline-item"><div class="year">Current</div><h3>B.A. Programme (Economics)</h3><p>Delhi University</p></div><div class="timeline-item"><div class="year">Ongoing</div><h3>Independent learning</h3><p>Exploring economics, politics, philosophy, and society through reading, research, and writing.</p></div></div></div></section>
+<section id="reading"><div class="wrap reveal"><div class="section-head"><div><div class="kicker">06 / Reading & ideas</div><h2>Thoughts worth keeping.</h2></div><p>Books and ideas that help shape questions, challenge assumptions, and open new perspectives.</p></div><div class="reading"><article><h3>Economics</h3><p>Ideas about incentives, institutions, markets, and the choices societies make.</p></article><article><h3>Philosophy</h3><p>Questions about meaning, knowledge, ethics, and how we understand ourselves.</p></article><article><h3>Politics & society</h3><p>Perspectives on power, governance, history, and the structures around us.</p></article></div></div></section>
+<section id="contact"><div class="wrap reveal"><div class="contact-box"><div><div class="kicker">07 / Contact</div><h2>Have a thought<br>to exchange?</h2><p>For conversations, thoughtful collaborations, or simply sharing ideas, feel free to get in touch.</p></div><div class="contact-links"><a class="btn primary email-btn" href="mailto:umangghiria90@gmail.com">Email me ↗</a><a class="btn secondary" href="https://www.instagram.com/the.quite_thinker?stkn=NHhuczJ1YWk0am1r" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a class="btn secondary" href="https://www.linkedin.com/in/umang-ghiria-00a687357?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div></div></section>
+
+
+<div class="library-modal" id="library-modal" aria-hidden="true">
+<div class="library-backdrop" id="library-backdrop"></div>
+<article class="library-page">
+<div class="library-topbar"><div><span class="reader-label">THE QUITE THINKER</span><strong>WRITING LIBRARY</strong></div><button class="library-close" id="close-library" type="button" aria-label="Close writing library">×</button></div>
+<div class="library-inner">
+<button class="library-back" id="library-back" type="button">← Back to portfolio</button>
+<div class="reader-kicker">Writing & essays</div><h2>A collection of thoughts.</h2>
+<p class="library-intro">Essays, reflections, and questions across the subjects I keep returning to.</p><div class="library-rule"></div>
+<div class="category-grid">
+<button class="category-card" data-category="Philosophy" type="button"><span>01</span><h3>Philosophy</h3><p>Existence, ethics, human nature, and ideas.</p><b>Explore ↗</b></button>
+<button class="category-card" data-category="Economics" type="button"><span>02</span><h3>Economics</h3><p>Wealth, development, inequality, and institutions.</p><b>Explore ↗</b></button>
+<button class="category-card" data-category="History" type="button"><span>03</span><h3>History</h3><p>Civilisations, the past, and the forces that shape it.</p><b>Explore ↗</b></button>
+<button class="category-card" data-category="Politics & Society" type="button"><span>04</span><h3>Politics & Society</h3><p>Power, institutions, people, and social change.</p><b>Explore ↗</b></button>
+<button class="category-card" data-category="Personal Reflections" type="button"><span>05</span><h3>Personal Reflections</h3><p>Experiences, observations, and questions from everyday life.</p><b>Explore ↗</b></button>
+<button class="category-card" data-category="Short Thoughts" type="button"><span>06</span><h3>Short Thoughts</h3><p>Brief observations and fragments of thought.</p><b>Explore ↗</b></button>
+</div></div></article></div>
+
+<div class="category-modal" id="category-modal" aria-hidden="true">
+<div class="category-backdrop" id="category-backdrop"></div>
+<article class="category-page">
+<div class="category-topbar"><button class="category-back" id="category-back" type="button">← Writing library</button><button class="library-close" id="close-category" type="button" aria-label="Close category">×</button></div>
+<div class="category-inner"><div class="reader-kicker" id="category-kicker">Category</div><h2 id="category-title">Economics</h2><p id="category-description" class="library-intro"></p><div class="library-rule"></div><div id="category-essays" class="category-essays"></div></div>
+</article></div>
+
+<div class="essay-modal" id="essay-modal" role="dialog" aria-modal="true" aria-labelledby="essay-title" aria-hidden="true">
+  <div class="essay-modal-backdrop" id="essay-backdrop"></div>
+  <article class="essay-reader">
+    <div class="reader-topbar">
+      <span class="reader-label">THE QUITE THINKER · HISTORY & ECONOMICS</span>
+      <button class="reader-close" id="close-essay" type="button" aria-label="Close essay">×</button>
+    </div>
+    <div class="reader-inner">
+      <div class="reader-kicker">Essay 01 · History · Economics</div>
+      <h2 id="essay-title">Was Ancient India Rich or Is It Just a Myth?</h2>
+      <p class="reader-deck">An exploration of India's historical economic prosperity, social inequalities, and the meaning of true wealth.</p>
+      <div class="reader-rule"></div>
+      <div class="essay-content" id="essay-body">
+<p><em>The answer here depends on how you define “richness.”</em></p>
+<p>The concept of richness can be defined in several ways—economic strength, social equality, and infrastructure. It is well known that the Indian subcontinent inherited one of the oldest civilizations in the history of mankind. Several historians claim that, due to its long history, India was the richest nation in world history. This statement is not entirely wrong; India, undoubtedly, was known for its high GDP share, flourishing trade routes with China and Persia, and advanced agriculture.</p>
+<p><strong>But does that make India truly rich? Does the golden age only signify wealth?</strong></p>
+<p>Several historians have debated that even though India's GDP was high, wealth was unevenly distributed. Most of the economy was agriculture-based, and famine and social discrimination were quite common.</p>
+<p>Cities like Mohenjo-Daro, Harappa, and Vijayanagar were advanced in infrastructure, but issues like social discrimination and the separation of particular groups still dominated society.</p>
+<p>If compared with modern riches, the GDP was high, but per capita income and industrialization didn't exist. While the GDP contribution was 25–30%, per capita income was still quite low, as a major part of the population was dependent on agriculture and handicrafts.</p>
+<h4>Possible Reasons for Economic Decline</h4>
+<p>One of the early invaders was the Persians and the Ghaznavid Empire. Some historians still believe that early invasions didn't affect the economic aspect of the country. While early invasions had mixed economic effects, the major economic collapse was seen during the 200 years of British rule.</p>
+<p>The GDP percentage dropped from 25% to 4% by 1947. Poverty and famines resulted in several deaths under colonial rule. The major reasons for the decline were deindustrialisation, taxation policies, the Bengal famine of 1770, the drain of wealth, heavy export tariffs, etc.</p>
+<h4>Conclusion</h4>
+<p>India had a vast history in which wealth was concentrated among the elite classes, but social differences also existed. Wealth and development were not evenly distributed, and thus, while ancient India was economically powerful, whether true richness is defined by equitable development and sustained prosperity remains debatable.</p>
+<p>India has never known the meaning of wealth in the modern sense. Its economy was based on primitive agriculture and a rigid social order.</p>
+<blockquote>— Karl Marx</blockquote>
+</div>
+      <div class="reader-endnote">The Quite Thinker · Original essay, lightly copy-edited</div>
+    </div>
+  </article>
+</div>
+\n<div class="essay-modal" id="feminism-essay-modal" role="dialog" aria-modal="true" aria-labelledby="feminism-essay-title" aria-hidden="true">
+  <div class="essay-modal-backdrop" id="feminism-essay-backdrop"></div>
+  <article class="essay-reader">
+    <div class="reader-topbar">
+      <span class="reader-label">THE QUITE THINKER · POLITICS &amp; SOCIETY</span>
+      <button class="reader-close" id="close-feminism-essay" type="button" aria-label="Close essay">×</button>
+    </div>
+    <div class="reader-inner">
+      <div class="reader-kicker">Essay 02 · Politics &amp; Society</div>
+      <h2 id="feminism-essay-title">Has Modern Feminism Lost Its Way?</h2>
+      <p class="reader-deck">A reflection on feminism, freedom of choice, and whether modern expectations have replaced the movement’s original emphasis on individual agency.</p>
+      <div class="reader-rule"></div>
+      <div class="essay-content" id="feminism-essay-body">
+<p><em>Feminism is the advocacy of equal rights and letting a woman be what she wants to be, and not limiting her only by the achievement of men.</em></p>
+<p>It is one of the most debated topics of modern history. In the century of advanced technology and open-minded thought, feminism is still criticised by men and even women in society.</p>
+<h4>The Origin</h4>
+<p>Women have been particularly dominated by men for centuries. Women have not only been humiliated but also biologically discriminated against for a very long period of time. This has been normalised for centuries.</p>
+<p>Feminism as a movement began in the mid-1800s, with the first wave focusing on basic legal rights like voting, property, education, and divorce. The term “feminism” was coined by French philosopher Charles Fourier in 1837.</p>
+<p>The second wave emerged after World War II, targeting deeper issues like reproductive rights, gender roles, and domestic violence.</p>
+<p>The third wave in the 1990s dealt with workplace harassment and representation, while the fourth wave, marked by the #MeToo movement, focused on online activism, consent, and freedom of choice in career, fashion, and identity.</p>
+<h4>How modern feminism is different from its initial objectives?</h4>
+<p>Feminism was initially started and spread with the idea of women’s freedom of choice and bodily integrity, to free women from societal pressure and create their own path with support rather than criticism. With several movements during these years, feminism was successful.</p>
+<p>But today, feminism has become a tool to force women towards work-life rather than let them choose. A woman who chooses motherhood or dependence on a man/marriage is labelled as anti-feminist.</p>
+<p>Women are being portrayed as victims instead of powerful agents. Feminism should have been about freedom and independence of women’s choice and not society’s fear of a necessary achievement.</p>
+<h4>Conclusion</h4>
+<p>In about two centuries, feminism has broken strong barriers. Massive progress has been made in job equality, education, political participation, leadership roles, legal wins against gender violence, and much more. But in the past few years, it has lost its collective motive.</p>
+<p>The main essence of feminism was to promote freedom and prove that women must be considered equally, with clear maturity in mind, and provided with equal freedom and opportunity in what they want to do and not what we expect them to do.</p>
+<p><strong>Forcing a woman to go to a job and earn is no different than forcing her to sit at home and be uneducated.</strong></p>
+<p>If feminism is truly about freedom, then it must defend women’s right to lead a company and to raise a child equally, question society, or question feminism itself.</p>
+<blockquote>“True feminism simply supports a woman’s right to choose — without fear, shame, or societal pressure — whether that choice aligns with tradition or breaks from it.”</blockquote>
+<blockquote>“The problem with modern feminism is that it sometimes replaces one expectation with another.”<br><span style="display:block;margin-top:10px;text-align:right;font-family:Inter,system-ui,sans-serif;font-size:.82em;letter-spacing:.02em;">— Christina Hoff Sommers</span></blockquote>
+</div>
+      <div class="reader-endnote">The Quite Thinker · Original essay, lightly copy-edited</div>
+    </div>
+  </article>
+</div>
+
+
+<div class="essay-modal" id="dowry-essay-modal" role="dialog" aria-modal="true" aria-labelledby="dowry-essay-title" aria-hidden="true">
+  <div class="essay-modal-backdrop" id="dowry-essay-backdrop"></div>
+  <article class="essay-reader">
+    <div class="reader-topbar">
+      <span class="reader-label">THE QUITE THINKER · POLITICS & SOCIETY</span>
+      <button class="reader-close" id="close-dowry-essay" type="button" aria-label="Close essay">×</button>
+    </div>
+    <div class="reader-inner">
+      <div class="reader-kicker">Essay 03 · Politics & Society</div>
+      <h2 id="dowry-essay-title">Dowry and Alimony: Two Sides of the Same Coin or Different Societal Norms?</h2>
+      <p class="reader-deck">A comparison of dowry and alimony, and why fairness should focus on circumstances rather than gender.</p>
+      <div class="reader-rule"></div>
+      <div class="essay-content" id="dowry-essay-body">
+<p>Dowry and alimony both involve money, but they show up at two very different stages of marriage. One is expected when a marriage begins, the other appears when it ends. It might feel like both are ways to extract money, just reversed in direction. But are they really the same thing?</p>
+<h4>Dowry - A Practice That Went Too Far</h4>
+<p>Dowry was once about gifts or help given to the bride. But over time, it turned into something ugly: a burden on the bride's family, demanded by the groom's side. What should have been a choice became an obligation.</p>
+<p>Today, dowry has led to pressure, abuse, and even deaths. It's not just illegal; it's morally wrong. It treats women like expenses to be paid off.</p>
+<h4>Alimony - Sometimes Misunderstood, But Not Always Unfair</h4>
+<p>Alimony is support given to a partner (usually the woman) after divorce. It exists because many women give up work, career, or education for the marriage or kids. And after a separation, starting over is hard, especially if one partner is financially stronger. But this is where questions start:</p>
+<p><em>- Should a well-educated woman who can earn still get alimony?</em><br><em>- If the divorce is mutual, why should one pay the other?</em><br><em>- If the woman has the child's custody and is already earning, why extra money?</em><br><em>- What if the money meant for children is misused?</em></p>
+<p>These are not unreasonable doubts. The truth is - alimony should not be a blank cheque. It should be based on the actual need, not just the gender.</p>
+<h4>Dowry vs Alimony - Where's the Real Difference?</h4>
+<p>Here's the thing: dowry is demanded. Alimony is awarded. One is a social pressure; the other is a legal remedy. Dowry promotes inequality. Alimony, when justified, tries to balance it. Still, some misuse the system. Educated, independent women sometimes seek lifelong alimony, and there's little tracking of how child support is spent. This isn't about hating alimony - it's about making it fair.</p>
+<p>Dowry shows how women are undervalued in marriage. Alimony tries to fix the damage done - but doesn't always get it right. The system should not favour one side blindly. Fairness should be the goal, not gender-based sympathy.</p>
+<h4>Conclusion</h4>
+<p>Both dowry and alimony reflect how society looks at women and money in marriage. Dowry should go - no debate there. Alimony should stay - but it needs better rules. Not every woman needs it, and not every man can afford it. If equality is what we're fighting for, then justice must feel fair to both and it mustn't be gender biased.</p>
+<blockquote>“Justice cannot be gender-biased; it must be circumstance-aware.”</blockquote>
+</div>
+      <div class="reader-endnote">The Quite Thinker · Original essay, lightly copy-edited</div>
+    </div>
+  </article>
+</div>
+
+<div class="essay-modal" id="freewill-essay-modal" role="dialog" aria-modal="true" aria-labelledby="freewill-essay-title" aria-hidden="true">
+  <div class="essay-modal-backdrop" id="freewill-essay-backdrop"></div>
+  <article class="essay-reader">
+    <div class="reader-topbar">
+      <span class="reader-label">THE QUITE THINKER · PHILOSOPHY</span>
+      <button class="reader-close" id="close-freewill-essay" type="button" aria-label="Close essay">×</button>
+    </div>
+    <div class="reader-inner">
+      <div class="reader-kicker">Essay 04 · Philosophy</div>
+      <h2 id="freewill-essay-title">The Illusion of Free Will in a Highly Conditioned Society</h2>
+      <p class="reader-deck">A reflection on whether our choices are truly our own when society, experience, and external forces shape the way we think.</p>
+      <div class="reader-rule"></div>
+      <div class="essay-content" id="freewill-essay-body">
+<h4>Do humans have free will, or is it just an illusion?</h4>
+<p>This question has been debated for centuries with no concrete outcome. The core debate is whether we have free will or if our actions are merely conditioned responses. Several philosophers and scientists have explored the concept in the way they perceived it.</p>
+<p>Philosophers like Baruch Spinoza and Sam Harris supported determinism, which states that all actions are determined by previous events and that free will does not exist. In contrast, philosophers like David Hume and Daniel Dennett believed that even if our choices are influenced, they may still be considered free as long as they align with our desires.</p>
+<p>Several neuroscientists have also explored this subject. The Benjamin Libet experiment of the 1980s and the John-Dylan Haynes study of 2008 suggested that decisions are made in the brain even before we become consciously aware of them.</p>
+<h4>What manipulates our decisions?</h4>
+<p>Our choices are highly influenced by societal rules, social structures, and external forces acting as invisible hands guiding our decisions. Factors such as religion, culture, and tradition play a significant role in shaping our choices. The content we consume as entertainment, political influences, propaganda, and the rewards and punishments set by society also impact the decisions we make.</p>
+<h4>Can we ever have free will?</h4>
+<p>Perhaps we already do, but we are manipulated into believing that we don't. We may never fully understand the extent of our free will, but I believe that we do have it. Even if our decisions are shaped by society and past experiences, we always have the ability to choose what is right. Questioning societal norms and increasing awareness can help us regain control over our decisions.</p>
+<p>While our choices are shaped by numerous external forces, the ability to question, resist, and redefine those influences is itself an exercise of free will.</p>
+<blockquote>“Man can do what he wills, but he cannot will what he wills.”<br><span style="display:block;margin-top:10px;text-align:right;font-family:Inter,system-ui,sans-serif;font-size:.82em;letter-spacing:.02em;">— Arthur Schopenhauer</span></blockquote>
+</div>
+      <div class="reader-endnote">The Quite Thinker · Original essay, lightly copy-edited</div>
+    </div>
+  </article>
+</div>
+
+
+<div class="essay-modal" id="language-essay-modal" role="dialog" aria-modal="true" aria-labelledby="language-essay-title" aria-hidden="true">
+  <div class="essay-modal-backdrop" id="language-essay-backdrop"></div>
+  <article class="essay-reader">
+    <div class="reader-topbar"><span class="reader-label">THE QUITE THINKER · POLITICS &amp; SOCIETY</span><button class="reader-close" id="close-language-essay" type="button" aria-label="Close essay">×</button></div>
+    <div class="reader-inner"><div class="reader-kicker">Essay 05 · Politics &amp; Society</div><h2 id="language-essay-title">Should India Have One Common Language?</h2><p class="reader-deck">A reflection on India's linguistic diversity, the politics of language, and whether a common bridge can coexist with regional identities.</p><div class="reader-rule"></div><div class="essay-content" id="language-essay-body">
+<h4>A Nation of Many Tongues</h4>
+<p>India's linguistic landscape is one of the most diverse in the world. With 22 official languages and over 19,500 dialects, every few hundred kilometres, you encounter a new cultural and linguistic zone. Tamil, Telugu, Bengali, Marathi, and others have rich literary and historical traditions — some older than Hindi itself. This diversity is not just beauty, it's identity. But with variation, communication across states becomes complicated, especially in education, law, transport, and administration.</p>
+<h4>Is Hindi Becoming an Imposition?</h4>
+<p>While Hindi is spoken by around 44% of Indians, the remaining majority speaks other regional languages. Government pushes to prioritize Hindi in national functions, exams, or signboards often spark backlash. For many, especially in the South and Northeast, it feels like one language is being placed above others. This isn't just about language — it's about cultural dominance. When a language becomes a tool for opportunity or exclusion, it stops being neutral and starts becoming political.</p>
+<h4>Can English Be the Neutral Bridge?</h4>
+<p>English, despite being a colonial leftover, has unintentionally become India's link language — used in courts, colleges, business, and inter-state communication. It's seen as region-neutral, offering a level field where no Indian language feels overpowered. But it comes with its own issues; it's not emotionally rooted, and often favours the urban elite. The way forward may not be choosing one language, but building a multilingual system where English connects, Hindi is optional, and regional languages are empowered — ensuring communication without compromise.</p>
+<h4>Conclusion: A Balanced Approach for the Future</h4>
+<p>For India's future, students must learn to embrace both their regional languages and a common language like English. Regional languages will maintain cultural identity and foster deeper local connections, while a common language can bridge gaps across states and offer access to broader opportunities. This balanced approach not only respects diversity but ensures effective communication in an increasingly globalized world.</p>
+<blockquote>“Students must grow up speaking the language of their land and learning the language of the world.”</blockquote>
+</div><div class="reader-endnote">The Quite Thinker · Original essay, lightly copy-edited</div></div>
+  </article>
+</div>
+
+<div class="essay-modal" id="education-essay-modal" role="dialog" aria-modal="true" aria-labelledby="education-essay-title" aria-hidden="true">
+  <div class="essay-modal-backdrop" id="education-essay-backdrop"></div>
+  <article class="essay-reader">
+    <div class="reader-topbar"><span class="reader-label">THE QUITE THINKER · POLITICS &amp; SOCIETY</span><button class="reader-close" id="close-education-essay" type="button" aria-label="Close essay">×</button></div>
+    <div class="reader-inner"><div class="reader-kicker">Essay 06 · Politics &amp; Society</div><h2 id="education-essay-title">Why Modern Education Fails to Create Critical Thinkers?</h2><p class="reader-deck">A critique of modern education, its emphasis on obedience and employability, and the need to revive questioning and independent thought.</p><div class="reader-rule"></div><div class="essay-content" id="education-essay-body">
+<p>Questioning and thinking has always been the greatest way of learning and creating something new. Modern education has suppressed thinkers.</p>
+<h4>The question is, when did it start?</h4>
+<p>Back in the 19th century, first by the Prussian model of education to create a disciplined and obedient man. The model had its advantages like a structured education system but was misused in the long run. Later the system was influenced by the Industrial Revolution and the end of World War II, when the factories needed hard-working labourers rather than thinkers. The focus was shifted to learning instead of questioning the known and finding a way to create something new. It shifted the motive of education from learning to just a mode of livelihood.</p>
+<h4>Why was the system changed so frequently? Was it intentional or just because of the need of workflow?</h4>
+<p>I guess it was both. Capitalism needed obedient men. One of the reasons was the discovery of the atomic bomb and its vital consequences. People started to fear Science again. Then again, Thinkers and questioners disrupted the smooth flow of society. The existence of man, the long line of discrimination, the burden of societal rules. In the past, thinkers have been suppressed because of asking questions which disturbed people's religious beliefs but were proven right over time with the evolution of science.</p>
+<h4>Why is it even important?</h4>
+<p>In the past, thinkers have been suppressed because of asking questions which disturbed people's religious beliefs but were proven right over time with the evolution of science. That is why critical thinking is important. It helps one to ask questions against the false beliefs of society so that they can be changed and the society could be evolved.</p>
+<h4>What can be the possible solution to all that?</h4>
+<p>The wide spread of ideas of philosophers and thinkers in the past through social media has already forced human to rethink the working of system and questioning it. Subjects of critical thinking like Philosophy, economics, science should be taught in educational institutions. Students must be encouraged to ask questions rather than to suppress them. Innovative ideas must be listened and acknowledged and came to force by government bodies. By just a little support and acknowledgement, we can revive the process of thinking and re-create a society where asking questions is a gift, not a sin...</p>
+</div><div class="reader-endnote">The Quite Thinker · Original essay, lightly copy-edited</div></div>
+  </article>
+</div>
+
+<div class="essay-modal" id="rural-essay-modal" role="dialog" aria-modal="true" aria-labelledby="rural-essay-title" aria-hidden="true">
+  <div class="essay-modal-backdrop" id="rural-essay-backdrop"></div>
+  <article class="essay-reader">
+    <div class="reader-topbar"><span class="reader-label">THE QUITE THINKER · ECONOMICS</span><button class="reader-close" id="close-rural-essay" type="button" aria-label="Close essay">×</button></div>
+    <div class="reader-inner"><div class="reader-kicker">Essay 07 · Economics</div><h2 id="rural-essay-title">Why Rural Students Struggle to Compete with Urban Students in Higher Education?</h2><p class="reader-deck">A look at the infrastructure, language, digital, and economic barriers that widen the gap between rural and urban students.</p><div class="reader-rule"></div><div class="essay-content" id="rural-essay-body">
+<p>India has numerous villages, and a major part of India's workforce comes from those areas. About two-thirds of the total workforce comes from rural India, but the outdated infrastructure and lack of resources among students result in a major gap between rural and urban youth.</p>
+<h4>The Neglected Rural India</h4>
+<p>A child born in an Indian village has a disadvantage compared to an urban child due to lack of exposure. Most of the villages lack basic infrastructure, trained teachers, and digital resources. Rural youth also face a language barrier. People in rural areas generally learn their local language while growing up and face high competition in English studies when they go to cities for higher education. Even though connected to the internet, the rural population isn't totally aware of their opportunities. Lack of resources leads youngsters to join family traditions like agriculture.</p>
+<h4>Why the gap exists?</h4>
+<p>Most rural schools lack basic infrastructure and facilities like electricity, water, libraries, or proper classrooms. The teacher-student ratio is presently high, and teachers are mostly under-trained or absent. Rural area students lack their foundation learning, leading to a digital divide due to lack of technological advantages like smart classes and computer programs. These are the root of a basic challenge — <strong>poverty</strong>. Rural families can't afford the high education cost. Child labour is one of the major concerns, followed by hunger, malnutrition and lack of clean water leading to rising health issues among children, affecting academic performance.</p>
+<h4>Vision for change.</h4>
+<p>Rural India is being forgotten for a very long time. Only major policy changes and dedicated reforms can resolve the issues. Government education funding has been stuck below 4% for decades. A minimum 6–8% is urgently needed for a push start. Even when the resources are allotted, schemes like mid-day meals and tribal education go underutilized. A reformed and effective system is needed to look over the drainage of resources. The government must install information programs in rural India not only to make students aware of future opportunities but also about the importance of education to reduce the dropout rate.</p>
+<h4>Conclusion.</h4>
+<p>When rural students come to the city for higher education, they face intense competition with weak academics, poor English and digital skills which effect their confidence and minimize their communication skills. Both government and society need to acknowledge the issue and work on the solutions for a better future of the nation as a whole.</p>
+<blockquote>“India lives in her villages, and the villages live in poverty. But if we are to build the nation, we must begin with the villages.” <span style="display:block;margin-top:10px;text-align:right;font-family:Inter,system-ui,sans-serif;font-size:.82em;letter-spacing:.02em;">— Jawaharlal Nehru</span></blockquote>
+</div><div class="reader-endnote">The Quite Thinker · Original essay, lightly copy-edited</div></div>
+  </article>
+</div>
+
+<div class="essay-modal" id="religion-essay-modal" role="dialog" aria-modal="true" aria-labelledby="religion-essay-title" aria-hidden="true">
+  <div class="essay-modal-backdrop" id="religion-essay-backdrop"></div><article class="essay-reader">
+    <div class="reader-topbar"><span class="reader-label">THE QUITE THINKER · PHILOSOPHY</span><button class="reader-close" id="close-religion-essay" type="button" aria-label="Close essay">×</button></div>
+    <div class="reader-inner"><div class="reader-kicker">Essay 08 · Philosophy</div><h2 id="religion-essay-title">The Evolution of Religion</h2><p class="reader-deck">A reflection on why religion survived the rise of scientific explanations, and the human need for meaning, comfort, and social order.</p><div class="reader-rule"></div><div class="essay-content">
+<p>For a very long time, religion was the only source of information humans had to understand the universe. Based on this, we often assume that religion grew out of human ignorance and a lack of information.</p>
+<p>But as time passed, science evolved and logically answered many questions about nature and its workings — lightning, rain, floods, the sun, the moon, reproduction, and much more.</p>
+<h4>But even then, religion didn't vanish. Why?</h4>
+<p>Maybe because religion wasn't the result of a lack of information alone. Humans have a tendency to deny uncomfortable truths over comfortable lies. Even after humans learned scientific reasons for many things, they sometimes continued to hold on to old beliefs because the truth was too harsh to accept.</p>
+<p>Science showed humans that certain things are inescapable, such as death. It was a harsh truth that everyone will die one day and that humanity itself will eventually cease to exist. Some people rejected that truth simply because they wanted to feel good. They stayed with religions that promised an immortal soul and comforting conditions after death.</p>
+<h4>Religion as social order</h4>
+<p>Another reason was society and its balance. Religion and worship existed even before formal civilisation or governance. When there were no written rules or moral codes to live by, people didn't always avoid killing, stealing, or doing bad deeds because someone could stop them, but because their Gods were believed to forbid them.</p>
+<p>With religion and Gods came moral and ethical rules for living in a society. Humans still fear that without Gods and religion, society will fall, that people will have no reason to stop doing bad deeds, and that chaos will rise.</p>
+<p>Religion once acted as a foundation stone of society to encompass chaos and provide meaning, but it was meant to be removed once society could stand on its own. Instead, humanity decided not to learn how to face indifference — and so religion remained.</p>
+</div><div class="reader-endnote">The Quite Thinker · Original writing, lightly copy-edited from handwritten notes</div></div></article>
+</div>
+
+<div class="essay-modal" id="consciousness-essay-modal" role="dialog" aria-modal="true" aria-labelledby="consciousness-essay-title" aria-hidden="true">
+  <div class="essay-modal-backdrop" id="consciousness-essay-backdrop"></div><article class="essay-reader">
+    <div class="reader-topbar"><span class="reader-label">THE QUITE THINKER · PHILOSOPHY</span><button class="reader-close" id="close-consciousness-essay" type="button" aria-label="Close essay">×</button></div>
+    <div class="reader-inner"><div class="reader-kicker">Essay 09 · Philosophy</div><h2 id="consciousness-essay-title">Human Consciousness Is a Tragic Misstep in Human Evolution</h2><p class="reader-deck">A philosophical reflection on consciousness, mortality, awareness, and the human tendency to seek comfort rather than confrontation.</p><div class="reader-rule"></div><div class="essay-content">
+<p>This line clearly states how evolution gave us awareness without necessarily giving us the capacity to bear it.</p>
+<p>But humans didn't evolve in a single day. It took thousands of years, so every generation of humans was gradually able to cope with it.</p>
+<p>Almost every species evolved over time, but only human consciousness represents this particular kind of awareness. We are aware of death, injustice, repetition, contradiction, and existence itself. But instead of learning how to live with these realities, humans have often tried to escape them, numb them, or overpower them with ideologies.</p>
+<h4>The human contradiction</h4>
+<p>The human race possesses extraordinary knowledge and awareness, yet selectively chooses comfort over confrontation — especially when facing finality like death.</p>
+<p>Our consciousness allows us to understand realities that other species may not consciously confront in the same way, but that same awareness can become a burden. We know that life is temporary, that suffering exists, and that many contradictions cannot simply be solved.</p>
+<p>Perhaps the tragedy is not consciousness itself, but our inability to accept what consciousness reveals.</p>
+</div><div class="reader-endnote">The Quite Thinker · Original writing, lightly copy-edited from handwritten notes</div></div></article>
+</div>
+
+<div class="essay-modal" id="custody-essay-modal" role="dialog" aria-modal="true" aria-labelledby="custody-essay-title" aria-hidden="true">
+  <div class="essay-modal-backdrop" id="custody-essay-backdrop"></div><article class="essay-reader">
+    <div class="reader-topbar"><span class="reader-label">THE QUITE THINKER · POLITICS &amp; SOCIETY</span><button class="reader-close" id="close-custody-essay" type="button" aria-label="Close essay">×</button></div>
+    <div class="reader-inner"><div class="reader-kicker">Essay 10 · Politics &amp; Society</div><h2 id="custody-essay-title">Feminism vs Custody Law</h2><p class="reader-deck">A reflection on gender equality, assumptions about parenting, and whether custody decisions should be based on roles or individual circumstances.</p><div class="reader-rule"></div><div class="essay-content">
+<p>We talk about feminism all along, how men and women should be equal. But when it comes to custody laws, we still lack equality.</p>
+<h4>Why do women get the child more often after divorce, even when both men and women are earners and responsible?</h4>
+<p>How and why is it assumed that the woman will be a better parent than the man?</p>
+<h4>Presumed reasons</h4>
+<ul><li><strong>Historical roles</strong> — men as primary earners and women as primary caregivers.</li><li><strong>Tender years doctrine</strong> — the assumption that younger children need mothers more for care, despite the absence of a simple rule that one parent is inherently better.</li><li><strong>Equality cannot mean identical outcomes</strong> — equal duties during marriage should not automatically become unequal rights after divorce.</li></ul>
+<h4>Solutions</h4>
+<ul><li>Joint custody where appropriate.</li><li>A parenting-time history check.</li><li>Custody decisions based on the individual circumstances and welfare of the child rather than gender assumptions.</li></ul>
+<p><strong>Core idea:</strong> A mother should not automatically be considered the better parent unless the father proves the mother unfit. The same standard should apply to both parents.</p>
+<p><strong>Current legal position in India:</strong> Child custody after divorce is determined primarily by the welfare and best interests of the child. Courts consider the circumstances and fitness of both parents rather than automatically awarding custody based solely on gender.</p>
+</div><div class="reader-endnote">The Quite Thinker · Original writing, lightly copy-edited from handwritten notes</div></div></article>
+</div>
+
+<div class="essay-modal" id="ai-essay-modal" role="dialog" aria-modal="true" aria-labelledby="ai-essay-title" aria-hidden="true">
+  <div class="essay-modal-backdrop" id="ai-essay-backdrop"></div><article class="essay-reader">
+    <div class="reader-topbar"><span class="reader-label">THE QUITE THINKER · POLITICS &amp; SOCIETY</span><button class="reader-close" id="close-ai-essay" type="button" aria-label="Close essay">×</button></div>
+    <div class="reader-inner"><div class="reader-kicker">Essay 11 · Politics &amp; Society</div><h2 id="ai-essay-title">The Impact of Artificial Intelligence on People and Society</h2><p class="reader-deck">An exploration of AI's history, public benefits, democratic risks, misinformation, and the need for responsible regulation.</p><div class="reader-rule"></div><div class="essay-content">
+<p>Before concluding the negative impacts of AI on society, it is essential to understand when and how it all began. The concept of a machine that could simulate human intelligence was proposed by British mathematician Alan Turing in the 1950s. Later, in 1956, John McCarthy, known as the “father of AI,” along with Marvin Minsky, coined the term <em>artificial intelligence</em> and formally introduced the concept.</p>
+<p>One of the first demonstrations of AI's potential came in 1997 when IBM's Deep Blue defeated reigning world chess champion Garry Kasparov. The rise of AI accelerated in the 2010s when corporate giants such as Microsoft, Google, Apple, and OpenAI entered the race, further advancing AI technology. Countries like the United States and Russia also began investing heavily in militarising AI in the 1980s with the DARPA project.</p>
+<h4>AI and society</h4><p>AI has had a significant impact on policymaking and public services. Its implementation has led to more informed decision-making, with governments utilising AI in areas such as traffic management and healthcare, significantly improving efficiency. AI has also played a crucial role in education and research, aiding in personalised learning and data analysis.</p>
+<h4>The risks</h4><p>However, AI also poses potential risks, as warned by several scientists. Most AI systems rely on existing data rather than critical thinking, which can result in biases and unfair treatment of certain groups. Since AI is often country-specific and controlled by private corporations, its information can be manipulated by governments, raising concerns about individual privacy and political repression.</p>
+<p>AI-generated deepfakes and misinformation campaigns can disrupt democracy and erode public trust in institutions. Recently, AI was used to create misleading content during the 2024 U.S. elections, with fabricated videos of political leaders becoming increasingly difficult to distinguish from authentic footage. Additionally, the AI chatbot Grok, developed by xAI, has faced criticism for bias and public manipulation. The misuse of AI can lead to an increase in misinformation and even facilitate abuse.</p>
+<h4>Regulation and the future</h4><p>It is crucial to recognise that AI can become dangerous if organisations lose control over it. While it is undeniably one of the most revolutionary inventions of the century, with the potential to shape a better future, it must be regulated under clear guidelines such as AI frameworks and transparency laws to prevent its misuse. Without proper oversight, the risks associated with AI could outweigh its benefits.</p>
+<blockquote>“The real risk with AI isn't that it will become evil, but that it will become too competent in achieving goals misaligned with human values.”<span style="display:block;margin-top:10px;text-align:right;font-family:Inter,system-ui,sans-serif;font-size:.82em;letter-spacing:.02em;">— Nick Bostrom</span></blockquote>
+</div><div class="reader-endnote">The Quite Thinker · Original essay, lightly copy-edited</div></div></article>
+</div>
+
+</main><footer><div class="wrap foot"><span>© <span id="year"></span> Umang Ghiria</span><span>Built around curiosity.</span></div></footer>
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
+document.getElementById('year').textContent=new Date().getFullYear();
+
+const essayModal=document.getElementById('essay-modal');
+const closeEssay=document.getElementById('close-essay');
+const essayBackdrop=document.getElementById('essay-backdrop');
+let returnToLibraryAfterEssay=false;
+function showEssay(fromLibrary=false){
+  returnToLibraryAfterEssay=fromLibrary;
+  essayModal.classList.add('open');
+  essayModal.setAttribute('aria-hidden','false');
+  document.body.classList.add('essay-open');
+  if(fromLibrary){document.body.classList.add('reading-from-library');}
+  setTimeout(()=>closeEssay && closeEssay.focus(),0);
+}
+function hideEssay(){
+  essayModal.classList.remove('open');
+  essayModal.setAttribute('aria-hidden','true');
+  document.body.classList.remove('essay-open','reading-from-library');
+  if(returnToLibraryAfterEssay){
+    returnToLibraryAfterEssay=false;
+    const cat=document.getElementById('category-modal');
+    if(cat){cat.classList.add('open');cat.setAttribute('aria-hidden','false');document.body.classList.add('category-open');}
+  }
+}
+closeEssay.addEventListener('click',hideEssay);
+essayBackdrop.addEventListener('click',hideEssay);
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&essayModal.classList.contains('open'))hideEssay();});
+
+const feminismEssayModal=document.getElementById('feminism-essay-modal');
+const closeFeminismEssay=document.getElementById('close-feminism-essay');
+const feminismEssayBackdrop=document.getElementById('feminism-essay-backdrop');
+let returnToLibraryAfterFeminism=false;
+function showFeminismEssay(fromLibrary=false){
+  returnToLibraryAfterFeminism=fromLibrary;
+  feminismEssayModal.classList.add('open');
+  feminismEssayModal.setAttribute('aria-hidden','false');
+  document.body.classList.add('essay-open');
+  if(fromLibrary){document.body.classList.add('reading-from-library');}
+  setTimeout(()=>closeFeminismEssay && closeFeminismEssay.focus(),0);
+}
+function hideFeminismEssay(){
+  feminismEssayModal.classList.remove('open');
+  feminismEssayModal.setAttribute('aria-hidden','true');
+  document.body.classList.remove('essay-open','reading-from-library');
+  if(returnToLibraryAfterFeminism){
+    returnToLibraryAfterFeminism=false;
+    const cat=document.getElementById('category-modal');
+    if(cat){cat.classList.add('open');cat.setAttribute('aria-hidden','false');document.body.classList.add('category-open');}
+  }
+}
+closeFeminismEssay.addEventListener('click',hideFeminismEssay);
+feminismEssayBackdrop.addEventListener('click',hideFeminismEssay);
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&feminismEssayModal.classList.contains('open'))hideFeminismEssay();});
+
+
+const dowryEssayModal=document.getElementById('dowry-essay-modal');
+const closeDowryEssay=document.getElementById('close-dowry-essay');
+const dowryEssayBackdrop=document.getElementById('dowry-essay-backdrop');
+let returnToLibraryAfterDowry=false;
+function showDowryEssay(fromLibrary=false){
+  returnToLibraryAfterDowry=fromLibrary;
+  dowryEssayModal.classList.add('open');
+  dowryEssayModal.setAttribute('aria-hidden','false');
+  document.body.classList.add('essay-open');
+  if(fromLibrary){document.body.classList.add('reading-from-library');}
+  setTimeout(()=>closeDowryEssay && closeDowryEssay.focus(),0);
+}
+function hideDowryEssay(){
+  dowryEssayModal.classList.remove('open');
+  dowryEssayModal.setAttribute('aria-hidden','true');
+  document.body.classList.remove('essay-open','reading-from-library');
+  if(returnToLibraryAfterDowry){
+    returnToLibraryAfterDowry=false;
+    const cat=document.getElementById('category-modal');
+    if(cat){cat.classList.add('open');cat.setAttribute('aria-hidden','false');document.body.classList.add('category-open');}
+  }
+}
+closeDowryEssay.addEventListener('click',hideDowryEssay);
+dowryEssayBackdrop.addEventListener('click',hideDowryEssay);
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&dowryEssayModal.classList.contains('open'))hideDowryEssay();});
+
+const freewillEssayModal=document.getElementById('freewill-essay-modal');
+const closeFreewillEssay=document.getElementById('close-freewill-essay');
+const freewillEssayBackdrop=document.getElementById('freewill-essay-backdrop');
+let returnToLibraryAfterFreewill=false;
+function showFreewillEssay(fromLibrary=false){
+  returnToLibraryAfterFreewill=fromLibrary;
+  freewillEssayModal.classList.add('open');
+  freewillEssayModal.setAttribute('aria-hidden','false');
+  document.body.classList.add('essay-open');
+  if(fromLibrary){document.body.classList.add('reading-from-library');}
+  setTimeout(()=>closeFreewillEssay && closeFreewillEssay.focus(),0);
+}
+function hideFreewillEssay(){
+  freewillEssayModal.classList.remove('open');
+  freewillEssayModal.setAttribute('aria-hidden','true');
+  document.body.classList.remove('essay-open','reading-from-library');
+  if(returnToLibraryAfterFreewill){
+    returnToLibraryAfterFreewill=false;
+    const cat=document.getElementById('category-modal');
+    if(cat){cat.classList.add('open');cat.setAttribute('aria-hidden','false');document.body.classList.add('category-open');}
+  }
+}
+closeFreewillEssay.addEventListener('click',hideFreewillEssay);
+freewillEssayBackdrop.addEventListener('click',hideFreewillEssay);
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&freewillEssayModal.classList.contains('open'))hideFreewillEssay();});
+
+
+const languageEssayModal=document.getElementById('language-essay-modal');
+const closeLanguageEssay=document.getElementById('close-language-essay');
+const languageEssayBackdrop=document.getElementById('language-essay-backdrop');
+let returnToLibraryAfterLanguage=false;
+function showLanguageEssay(fromLibrary=false){returnToLibraryAfterLanguage=fromLibrary;languageEssayModal.classList.add('open');languageEssayModal.setAttribute('aria-hidden','false');document.body.classList.add('essay-open');if(fromLibrary)document.body.classList.add('reading-from-library');setTimeout(()=>closeLanguageEssay&&closeLanguageEssay.focus(),0)}
+function hideLanguageEssay(){languageEssayModal.classList.remove('open');languageEssayModal.setAttribute('aria-hidden','true');document.body.classList.remove('essay-open','reading-from-library');if(returnToLibraryAfterLanguage){returnToLibraryAfterLanguage=false;const cat=document.getElementById('category-modal');if(cat){cat.classList.add('open');cat.setAttribute('aria-hidden','false');document.body.classList.add('category-open')}}}
+closeLanguageEssay.addEventListener('click',hideLanguageEssay);languageEssayBackdrop.addEventListener('click',hideLanguageEssay);document.addEventListener('keydown',event=>{if(event.key==='Escape'&&languageEssayModal.classList.contains('open'))hideLanguageEssay();});
+
+const educationEssayModal=document.getElementById('education-essay-modal');
+const closeEducationEssay=document.getElementById('close-education-essay');
+const educationEssayBackdrop=document.getElementById('education-essay-backdrop');
+let returnToLibraryAfterEducation=false;
+function showEducationEssay(fromLibrary=false){returnToLibraryAfterEducation=fromLibrary;educationEssayModal.classList.add('open');educationEssayModal.setAttribute('aria-hidden','false');document.body.classList.add('essay-open');if(fromLibrary)document.body.classList.add('reading-from-library');setTimeout(()=>closeEducationEssay&&closeEducationEssay.focus(),0)}
+function hideEducationEssay(){educationEssayModal.classList.remove('open');educationEssayModal.setAttribute('aria-hidden','true');document.body.classList.remove('essay-open','reading-from-library');if(returnToLibraryAfterEducation){returnToLibraryAfterEducation=false;const cat=document.getElementById('category-modal');if(cat){cat.classList.add('open');cat.setAttribute('aria-hidden','false');document.body.classList.add('category-open')}}}
+closeEducationEssay.addEventListener('click',hideEducationEssay);educationEssayBackdrop.addEventListener('click',hideEducationEssay);document.addEventListener('keydown',event=>{if(event.key==='Escape'&&educationEssayModal.classList.contains('open'))hideEducationEssay();});
+
+const ruralEssayModal=document.getElementById('rural-essay-modal');
+const closeRuralEssay=document.getElementById('close-rural-essay');
+const ruralEssayBackdrop=document.getElementById('rural-essay-backdrop');
+let returnToLibraryAfterRural=false;
+function showRuralEssay(fromLibrary=false){returnToLibraryAfterRural=fromLibrary;ruralEssayModal.classList.add('open');ruralEssayModal.setAttribute('aria-hidden','false');document.body.classList.add('essay-open');if(fromLibrary)document.body.classList.add('reading-from-library');setTimeout(()=>closeRuralEssay&&closeRuralEssay.focus(),0)}
+function hideRuralEssay(){ruralEssayModal.classList.remove('open');ruralEssayModal.setAttribute('aria-hidden','true');document.body.classList.remove('essay-open','reading-from-library');if(returnToLibraryAfterRural){returnToLibraryAfterRural=false;const cat=document.getElementById('category-modal');if(cat){cat.classList.add('open');cat.setAttribute('aria-hidden','false');document.body.classList.add('category-open')}}}
+closeRuralEssay.addEventListener('click',hideRuralEssay);ruralEssayBackdrop.addEventListener('click',hideRuralEssay);document.addEventListener('keydown',event=>{if(event.key==='Escape'&&ruralEssayModal.classList.contains('open'))hideRuralEssay();});
+
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+<script>
+
+
+const extraEssayConfigs=[['religion','religion-essay-modal','close-religion-essay','religion-essay-backdrop'],['consciousness','consciousness-essay-modal','close-consciousness-essay','consciousness-essay-backdrop'],['custody','custody-essay-modal','close-custody-essay','custody-essay-backdrop'],['ai','ai-essay-modal','close-ai-essay','ai-essay-backdrop']];
+const extraEssayState={};
+extraEssayConfigs.forEach(([key,mid,cid,bid])=>{const modal=document.getElementById(mid),close=document.getElementById(cid),backdrop=document.getElementById(bid);extraEssayState[key]={returnToLibrary:false};function hide(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('essay-open','reading-from-library');if(extraEssayState[key].returnToLibrary){extraEssayState[key].returnToLibrary=false;const cat=document.getElementById('category-modal');if(cat){cat.classList.add('open');cat.setAttribute('aria-hidden','false');document.body.classList.add('category-open')}}}window['show'+key.charAt(0).toUpperCase()+key.slice(1)+'Essay']=function(fromLibrary=false){extraEssayState[key].returnToLibrary=fromLibrary;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('essay-open');if(fromLibrary)document.body.classList.add('reading-from-library');modal.querySelector('.essay-reader').scrollTop=0};close.addEventListener('click',hide);backdrop.addEventListener('click',hide);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))hide()});});
+
+(function(){
+const library=document.getElementById('library-modal'), category=document.getElementById('category-modal');
+const open=document.getElementById('open-library'), nav=document.getElementById('writing-nav'), close=document.getElementById('close-library'), back=document.getElementById('library-back'), backdrop=document.getElementById('library-backdrop');
+const catBack=document.getElementById('category-back'), catClose=document.getElementById('close-category'), catBackdrop=document.getElementById('category-backdrop'), catTitle=document.getElementById('category-title'), catKicker=document.getElementById('category-kicker'), catDesc=document.getElementById('category-description'), essays=document.getElementById('category-essays');
+const data={
+"Philosophy":{desc:"Existence, ethics, human nature, and ideas.",items:[{title:"The Illusion of Free Will in a Highly Conditioned Society",desc:"A reflection on free will, determinism, and how society and external forces shape our decisions.",action:"freewill"},{title:"The Evolution of Religion",desc:"A reflection on why religion survived the rise of scientific explanations, and the human need for meaning, comfort, and social order.",action:"religion"},{title:"Human Consciousness Is a Tragic Misstep in Human Evolution",desc:"A philosophical reflection on consciousness, mortality, awareness, and the human tendency to seek comfort over confrontation.",action:"consciousness"}]},
+"Economics":{desc:"Wealth, development, inequality, and institutions.",items:[{title:"Was Ancient India Rich or Is It Just a Myth?",desc:"An exploration of India's historical economic prosperity, social inequalities, and the meaning of true wealth.",action:true},{title:"Why Rural Students Struggle to Compete with Urban Students in Higher Education?",desc:"A look at the structural barriers that widen the gap between rural and urban students in higher education.",action:"rural"}]},
+"History":{desc:"Civilisations, the past, and the forces that shape it.",items:[]},
+"Politics & Society":{desc:"Power, institutions, people, and social change.",items:[{title:"Has Modern Feminism Lost Its Way?",desc:"A reflection on feminism, freedom of choice, and whether modern expectations have replaced the movement’s original emphasis on individual agency.",action:"feminism"},{title:"Dowry and Alimony: Two Sides of the Same Coin or Different Societal Norms?",desc:"A comparison of dowry and alimony, and why fairness should focus on circumstances rather than gender.",action:"dowry"},{title:"Should India Have One Common Language?",desc:"An exploration of India's linguistic diversity, language politics, and the search for a balanced common bridge.",action:"language"},{title:"Why Modern Education Fails to Create Critical Thinkers?",desc:"A critique of modern education, its emphasis on obedience and employability, and the need to revive questioning.",action:"education"},{title:"Feminism vs Custody Law",desc:"A reflection on gender equality, assumptions about parenting, and whether custody decisions should be based on roles or individual circumstances.",action:"custody"},{title:"The Impact of Artificial Intelligence on People and Society",desc:"An exploration of AI's history, public benefits, democratic risks, misinformation, and the need for responsible regulation.",action:"ai"}]},
+"Personal Reflections":{desc:"Experiences, observations, and questions from everyday life.",items:[]},
+"Short Thoughts":{desc:"Brief observations and fragments of thought.",items:[]}};
+function openLibrary(){library.classList.add('open');library.setAttribute('aria-hidden','false');document.body.classList.add('library-open')}
+function closeLibrary(){library.classList.remove('open');library.setAttribute('aria-hidden','true');document.body.classList.remove('library-open')}
+function openCategory(name){const item=data[name];catTitle.textContent=name;catKicker.textContent='Writing library · '+name;catDesc.textContent=item.desc;essays.innerHTML='';
+if(!item.items.length){essays.innerHTML='<div class="empty-category">No writings in this category yet.<br><span>More pieces will be added as the collection grows.</span></div>'}
+item.items.forEach(entry=>{const card=document.createElement('div');card.className='essay-list-card';card.innerHTML='<div><h3></h3><p></p></div><button type="button">Read essay ↗</button>';card.querySelector('h3').textContent=entry.title;card.querySelector('p').textContent=entry.desc;if(entry.action==='feminism')card.querySelector('button').addEventListener('click',()=>{showFeminismEssay(true)});else if(entry.action==='dowry')card.querySelector('button').addEventListener('click',()=>{showDowryEssay(true)});else if(entry.action==='freewill')card.querySelector('button').addEventListener('click',()=>{showFreewillEssay(true)});else if(entry.action==='language')card.querySelector('button').addEventListener('click',()=>{showLanguageEssay(true)});else if(entry.action==='education')card.querySelector('button').addEventListener('click',()=>{showEducationEssay(true)});else if(entry.action==='custody')card.querySelector('button').addEventListener('click',()=>{showCustodyEssay(true)});else if(entry.action==='ai')card.querySelector('button').addEventListener('click',()=>{showAiEssay(true)});else if(entry.action==='religion')card.querySelector('button').addEventListener('click',()=>{showReligionEssay(true)});else if(entry.action==='consciousness')card.querySelector('button').addEventListener('click',()=>{showConsciousnessEssay(true)});else if(entry.action==='rural')card.querySelector('button').addEventListener('click',()=>{showRuralEssay(true)});else if(entry.action)card.querySelector('button').addEventListener('click',()=>{showEssay(true)});essays.appendChild(card)});
+library.classList.remove('open');library.setAttribute('aria-hidden','true');document.body.classList.remove('library-open');category.classList.add('open');category.setAttribute('aria-hidden','false');document.body.classList.add('category-open');category.querySelector('.category-page').scrollTop=0}
+function backToLibrary(){category.classList.remove('open');category.setAttribute('aria-hidden','true');document.body.classList.remove('category-open');openLibrary()}
+if(open)open.addEventListener('click',openLibrary);if(nav)nav.addEventListener('click',e=>{e.preventDefault();openLibrary()});if(close)close.addEventListener('click',closeLibrary);if(back)back.addEventListener('click',closeLibrary);if(backdrop)backdrop.addEventListener('click',closeLibrary);if(catBack)catBack.addEventListener('click',backToLibrary);if(catClose)catClose.addEventListener('click',()=>{category.classList.remove('open');category.setAttribute('aria-hidden','true');document.body.classList.remove('category-open')});if(catBackdrop)catBackdrop.addEventListener('click',()=>{category.classList.remove('open');category.setAttribute('aria-hidden','true');document.body.classList.remove('category-open')});
+document.querySelectorAll('.category-card').forEach(card=>card.addEventListener('click',()=>openCategory(card.dataset.category)));
+})();
+
+</script>
+</body>
+</html>
