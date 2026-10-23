@@ -68,26 +68,58 @@ body,p,.card p,.focus-grid p,.section-head p,.about-copy,.contact-box p,.reading
 @media(max-width:720px){.section-head p{margin-top:20px}.hero{padding:40px 0 64px;align-items:flex-start}section{padding:64px 0}.focus-strip{padding:64px 0}.focus-head{margin-bottom:40px}.focus-grid{gap:24px}.focus-grid article{padding:24px}.about-grid{gap:32px}.cards,.category-grid{gap:24px}.card,.category-card,.essay-list-card,.reading article{padding:24px}.contact-box{padding:32px}.reader-inner{padding:48px 24px 48px}.library-inner,.category-inner{padding:24px 24px 64px}}
 @media(max-width:639px){.cards,.reading,.category-grid,.focus-grid{grid-template-columns:1fr}}
 
+
+/* V6 portfolio redesign — charcoal, rose, warm ivory and muted gold */
+:root{--bg:#111214;--panel:#191a1c;--panel2:#202123;--text:#f5f3ee;--muted:#b0aca6;--line:#343235;--accent:#9b5360;--accent2:#bd7b83;--max:1160px}
+html{scroll-padding-top:88px}
+body{background:var(--bg);color:var(--text)}
+header{background:rgba(17,18,20,.9);border-bottom-color:rgba(245,243,238,.1)}
+.logo span,.links a:hover,.eyebrow,.kicker,.section-head .kicker,.card-top,.timeline-item .year,.email,.essay-details summary{color:#bd7b83}
+.hero{min-height:680px;padding-top:118px;padding-bottom:112px}
+.hero:after{background:radial-gradient(circle,rgba(155,83,96,.18),transparent 68%)}
+.hero h1{font-family:Newsreader,Georgia,serif;font-weight:500;letter-spacing:-.065em;line-height:.99;max-width:980px}
+.hero h1 em{color:#bd7b83}
+.hero p{color:#c4beb8}
+.primary{background:#9b5360;color:#fffaf6;border-color:#9b5360}
+.primary:hover{background:#bd7b83}
+.secondary{border-color:#484247}
+section{border-top-color:rgba(245,243,238,.1)}
+.section-head h2{font-family:Newsreader,Georgia,serif;font-weight:500;letter-spacing:-.055em}
+.lead{font-family:Newsreader,Georgia,serif;font-size:1.7rem;color:#e8e2db}
+.card{background:linear-gradient(145deg,#1b1b1e,#151517);border-color:#373336}
+.card:hover{border-color:#9b5360}
+.chip{border-color:#494044;background:#1b191b;color:#e5d9d6}
+.timeline{border-left-color:#65434a}
+.timeline-item:before{background:#bd7b83;box-shadow:0 0 0 5px #241a1d}
+.reading article{background:#19191b;border-color:#383336}
+.contact-box{background:linear-gradient(135deg,#282023,#171719 70%);border-color:#594047}
+.email{border-bottom-color:#9b5360}
+.writing-library-preview{background:linear-gradient(120deg,rgba(155,83,96,.2),rgba(255,255,255,.025)),#19191b;border-color:#4a393e}
+.library-open-btn{background:#9b5360;color:#fffaf6;border-color:#9b5360}
+.library-open-btn:hover{background:#bd7b83}
+@media(max-width:720px){.links{background:#171719}.hero{min-height:600px;padding:84px 0 90px}.hero h1{font-size:clamp(3.2rem,15vw,5.7rem)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;scroll-behavior:auto!important}}
+
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="logo" href="#home" aria-label="Umang Ghiria home">UG<span>.</span></a><button class="menu" id="menu" aria-expanded="false" aria-label="Toggle navigation">☰</button><nav class="links" id="links"><a href="#about">About</a><a href="#writing" id="writing-nav">Writing</a><a href="#research">Research</a><a href="#journey">Journey</a><a href="#reading">Reading</a><a href="#contact">Contact</a></nav></div></header>
+<header><div class="wrap nav"><a class="logo" href="#home" aria-label="Umang Ghiria home">UG<span>.</span></a><button class="menu" id="menu" aria-expanded="false" aria-label="Toggle navigation">☰</button><nav class="links" id="links"><a href="#about">About</a><a href="#journey">Journey</a><a href="#skills">Skills</a><a href="#writing" id="writing-nav">Writing</a><a href="#research">Research</a><a href="#reading">Reading</a><a href="#contact">Contact</a></nav></div></header>
 <main>
-<div class="wrap hero" id="home"><div class="reveal"><div class="personal-intro">Hi, I'm Umang.</div><h1>Curiosity is<br>where <em>everything</em><br>begins.</h1><p>Exploring economics, politics, philosophy, and society through critical thinking, research, and writing.</p><div class="actions"><a class="btn primary" href="#writing">Explore my work <span>↗</span></a><a class="btn secondary" href="#about">A little about me <span>↓</span></a></div></div><div class="scroll-note">Scroll to explore&nbsp; ↓</div></div>
+<div class="wrap hero" id="home"><div class="reveal"><div class="personal-intro">STUDENT · ASPIRING WRITER · INDEPENDENT THINKER</div><h1>Ideas,<br>questioned.<br><em>Worlds, understood.</em></h1><p>Exploring economics, politics, philosophy, and society through critical thinking, research, and writing.</p><div class="actions"><a class="btn primary" href="#writing">Explore my work <span>↗</span></a><a class="btn secondary" href="#about">A little about me <span>↓</span></a></div></div><div class="scroll-note">Scroll to explore&nbsp; ↓</div></div>
 
-<section class="focus-strip" aria-label="Current focus"><div class="wrap"><div class="focus-head"><span class="kicker">Currently exploring</span><span class="focus-note">Questions I keep returning to</span></div><div class="focus-grid"><article><span>01</span><h3>Economics</h3><p>Development, inequality, institutions, and how economies shape everyday life.</p></article><article><span>02</span><h3>Political thought</h3><p>Power, governance, ideas, and the forces behind political change.</p></article><article><span>03</span><h3>Philosophy</h3><p>Meaning, knowledge, ethics, and the questions beneath ordinary assumptions.</p></article><article><span>04</span><h3>Writing</h3><p>Turning questions into essays, reflections, and arguments worth revisiting.</p></article></div></div></section>
+
 
 <section id="about"><div class="wrap reveal"><div class="section-head"><div><div class="kicker">01 / About me</div><h2>A mind in<br>the making.</h2></div><p>A personal space for ideas, learning, and the ongoing process of understanding the world.</p></div><div class="about-grid"><div><p class="lead">An undergraduate student exploring economics, politics, philosophy, and society through critical thinking, research, and writing.</p><p class="about-copy">This website is a growing record of my academic journey, questions, and work. It is intended to evolve alongside what I learn and the perspectives I develop.</p></div><div class="facts"><div class="fact"><span>Name</span><span>Umang Ghiria</span></div><div class="fact"><span>University</span><span>Delhi University</span></div><div class="fact"><span>Degree</span><span>B.A. Programme (Economics)</span></div><div class="fact"><span>Interests</span><span>Economics · Politics · Philosophy</span></div></div></div></div></section>
+<section id="journey"><div class="wrap reveal"><div class="section-head"><div><div class="kicker">02 / Academic journey</div><h2>Still becoming.</h2></div><p>Education is not a finished destination, but a process of asking better questions.</p></div><div class="timeline"><div class="timeline-item"><div class="year">Current</div><h3>B.A. Programme (Economics)</h3><p>Delhi University</p></div><div class="timeline-item"><div class="year">Ongoing</div><h3>Independent learning</h3><p>Exploring economics, politics, philosophy, and society through reading, research, and writing.</p></div></div></div></section>
+<section id="skills"><div class="wrap reveal"><div class="section-head"><div><div class="kicker">03 / Skills & tools</div><h2>Building capability.</h2></div><p>A living section that can grow as I gain experience and complete meaningful work.</p></div><div class="skills"><span class="chip">Critical thinking</span><span class="chip">Research</span><span class="chip">Writing</span><span class="chip">Economics</span><span class="chip">Political analysis</span></div><p class="disclaimer">Skills and tools will be expanded as specific experience and projects are added.</p></div></section>
 <section id="writing"><div class="wrap reveal">
-<div class="section-head"><div><div class="kicker">02 / Writing & essays</div><h2>Ideas, in words.</h2></div>
+<div class="section-head"><div><div class="kicker">04 / Writing & essays</div><h2>Ideas, in words.</h2></div>
 <p>Essays, reflections, and questions organised into a growing library of ideas.</p></div>
 <div class="writing-library-preview">
 <div class="library-preview-copy"><span class="library-mini-label">THE QUITE THINKER · LIBRARY</span><h3>A collection of thoughts.</h3><p>Explore my writing by subject. Choose a category to discover the pieces inside.</p></div>
 <button class="library-open-btn" type="button" id="open-library">Open writing library <span>↗</span></button>
 </div></div></section>
-<section id="research"><div class="wrap reveal"><div class="section-head"><div><div class="kicker">03 / Research & projects</div><h2>Learning by doing.</h2></div><p>A place for independent projects, research, and analytical work as they take shape.</p></div><div class="cards"><article class="card"><div class="card-top"><span>Research</span><span>01</span></div><h3>Independent research</h3><p>Explorations in economics, public policy, and related fields, developed through reading and analysis.</p><div class="note">Projects to be added</div></article><article class="card"><div class="card-top"><span>Projects</span><span>02</span></div><h3>Analytical work</h3><p>A collection of practical work and projects that reflect curiosity, experimentation, and continued learning.</p><div class="note">Projects to be added</div></article></div></div></section>
-<section id="skills"><div class="wrap reveal"><div class="section-head"><div><div class="kicker">04 / Skills & tools</div><h2>Building capability.</h2></div><p>A living section that can grow as I gain experience and complete meaningful work.</p></div><div class="skills"><span class="chip">Critical thinking</span><span class="chip">Research</span><span class="chip">Writing</span><span class="chip">Economics</span><span class="chip">Political analysis</span></div><p class="disclaimer">Skills and tools will be expanded as specific experience and projects are added.</p></div></section>
-<section id="journey"><div class="wrap reveal"><div class="section-head"><div><div class="kicker">05 / Academic journey</div><h2>Still becoming.</h2></div><p>Education is not a finished destination, but a process of asking better questions.</p></div><div class="timeline"><div class="timeline-item"><div class="year">Current</div><h3>B.A. Programme (Economics)</h3><p>Delhi University</p></div><div class="timeline-item"><div class="year">Ongoing</div><h3>Independent learning</h3><p>Exploring economics, politics, philosophy, and society through reading, research, and writing.</p></div></div></div></section>
+<section id="research"><div class="wrap reveal"><div class="section-head"><div><div class="kicker">05 / Research & projects</div><h2>Learning by doing.</h2></div><p>A place for independent projects, research, and analytical work as they take shape.</p></div><div class="cards"><article class="card"><div class="card-top"><span>Research</span><span>01</span></div><h3>Independent research</h3><p>Explorations in economics, public policy, and related fields, developed through reading and analysis.</p><div class="note">Projects to be added</div></article><article class="card"><div class="card-top"><span>Projects</span><span>02</span></div><h3>Analytical work</h3><p>A collection of practical work and projects that reflect curiosity, experimentation, and continued learning.</p><div class="note">Projects to be added</div></article></div></div></section>
 <section id="reading"><div class="wrap reveal"><div class="section-head"><div><div class="kicker">06 / Reading & ideas</div><h2>Thoughts worth keeping.</h2></div><p>Books and ideas that help shape questions, challenge assumptions, and open new perspectives.</p></div><div class="reading"><article><h3>Economics</h3><p>Ideas about incentives, institutions, markets, and the choices societies make.</p></article><article><h3>Philosophy</h3><p>Questions about meaning, knowledge, ethics, and how we understand ourselves.</p></article><article><h3>Politics & society</h3><p>Perspectives on power, governance, history, and the structures around us.</p></article></div></div></section>
 <section id="contact"><div class="wrap reveal"><div class="contact-box"><div><div class="kicker">07 / Contact</div><h2>Have a thought<br>to exchange?</h2><p>For conversations, thoughtful collaborations, or simply sharing ideas, feel free to get in touch.</p></div><div class="contact-links"><a class="btn primary email-btn" href="mailto:umangghiria90@gmail.com">Email me ↗</a><a class="btn secondary" href="https://www.instagram.com/the.quite_thinker?stkn=NHhuczJ1YWk0am1r" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a class="btn secondary" href="https://www.linkedin.com/in/umang-ghiria-00a687357?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div></div></section>
 
