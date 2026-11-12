@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://umang.umangghiria90.workers.dev/sitemap.xml
